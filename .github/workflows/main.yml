@@ -19,6 +19,6 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
-          repository: tozteritta/test2
+          repository: tozteritta/test
           tags: latest, ${{ github.run_number }}
           
