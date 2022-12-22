@@ -10,7 +10,7 @@ on:
 jobs:
   build-image:
     name: Bulding and pushing Docker image with application
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latestetrtrtrtrt
     
     steps:
       - name: Checkout repo ${{ env.APPLICATION_NAME }}
