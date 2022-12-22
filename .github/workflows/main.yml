@@ -1,4 +1,6 @@
-name: Dockerize-app-test2
+name: Dockerize-app-test
+env:
+  APPLICATION_NAME : "test2"
 
 on:
   push:
@@ -7,11 +9,11 @@ on:
 
 jobs:
   build-image:
-    name: Bulding and pushing Docker image with app-test2 application
+    name: Bulding and pushing Docker image with ${{ env.APPLICATION_NAME }} application
     runs-on: ubuntu-latest
     
     steps:
-      - name: Checkout repo test2
+      - name: Checkout repo ${{ env.APPLICATION_NAME }}
         uses: actions/checkout@v3
       
       - name: Login to Docker Hub
@@ -24,5 +26,5 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: tozteritta/test2:latest, tozteritta/test2:${{ github.run_number }}
+          tags: ${{ secrets.DOCKER_USERNAME }}/${{ env.APPLICATION_NAME }}:latest, ${{ secrets.DOCKER_USERNAME }}/${{ env.APPLICATION_NAME }}:${{ github.run_number }}
           
