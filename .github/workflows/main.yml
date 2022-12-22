@@ -1,4 +1,4 @@
-name: Dockerize test app
+name: Dockerize-test-app
 
 on:
   push:
