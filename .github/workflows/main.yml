@@ -9,6 +9,10 @@ jobs:
   build-container:
     name: Buld Docker container test app image from file
     runs-on: ubuntu-latest
+    permissions:
+      packages: write
+      contents: read
+
     steps:
       - name: Checkout repo test2
         uses: actions/checkout@v3
