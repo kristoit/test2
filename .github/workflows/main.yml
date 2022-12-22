@@ -23,7 +23,7 @@ jobs:
       - name: Build and pusg
         uses: docker/build-push-action@v2
         with:
-          context: .
+          #context: .
           push: true
           tags: tozteritta/test2:latest, tozteritta/test2:${{ github.run_number }} 
                 
