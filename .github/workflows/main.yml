@@ -1,4 +1,4 @@
-name: Dockerize-test-app2
+name: Dockerize-app-test2
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
 
 jobs:
   build-image:
-    name: Bulding and pushing Docker image with test-app2 application
+    name: Bulding and pushing Docker image with app-test2 application
     runs-on: ubuntu-latest
     
     steps:
